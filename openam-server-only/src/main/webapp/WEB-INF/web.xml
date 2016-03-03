@@ -140,6 +140,35 @@
     </filter>
     -->
     <filter>
+        <filter-name>CORSFilter</filter-name>
+        <filter-class>org.forgerock.openam.cors.CORSFilter</filter-class>
+        <init-param>
+            <description>
+                Accepted Methods (Required):
+                A comma separated list of HTTP methods for which to accept CORS requests.
+            </description>
+            <param-name>methods</param-name>
+            <param-value>POST,PUT,GET,DELETE</param-value>
+        </init-param>
+        <init-param>
+            <description>
+                Accepted Origins (Required):
+                A comma separated list of origins from which to accept CORS requests.
+            </description>
+            <param-name>origins</param-name>
+            <param-value>*</param-value>
+        </init-param>
+        <init-param>
+            <description>
+                Allow Credentials (Optional):
+                Whether to include the Vary (Origin) and Access-Control-Allow-Credentials headers in the response.
+                Default: false
+            </description>
+            <param-name>allowCredentials</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter>
         <filter-name>AuthNFilter</filter-name>
         <filter-class>com.sun.identity.rest.AuthNFilter</filter-class>
     </filter>
@@ -257,6 +286,10 @@
         <url-pattern>/json/*</url-pattern>
     </filter-mapping>
     -->
+    <filter-mapping>
+        <filter-name>CORSFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     <filter-mapping>
         <filter-name>AuthNFilter</filter-name>
         <url-pattern>/ws/*</url-pattern>
