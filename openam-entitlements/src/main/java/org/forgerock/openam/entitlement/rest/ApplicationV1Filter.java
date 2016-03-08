@@ -265,7 +265,13 @@ public class ApplicationV1Filter implements Filter {
         }
 
         final Subject callingSubject = contextHelper.getSubject(context);
-        final String applicationName = request.getResourcePath();
+        String tmpAppName;
+        try {
+            tmpAppName = java.net.URLDecoder.decode(request.getResourcePath(), "UTF-8");
+        } catch (Exception e) {
+            tmpAppName = request.getResourcePath();
+        }
+        final String applicationName = tmpAppName;
 
         try {
             final ApplicationService applicationService = applicationServiceFactory.create(callingSubject, pathRealm);
