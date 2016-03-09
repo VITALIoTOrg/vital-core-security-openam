@@ -25,7 +25,7 @@ import org.forgerock.services.context.SecurityContext;
 public final class ServerContextHelper {
 
     /**
-     * Gets the iPlanetDirectoryPro cookie from the Context.
+     * Gets the vitalAccessToken cookie from the Context.
      *
      * @param context The Context instance.
      * @return The cookie value or null.

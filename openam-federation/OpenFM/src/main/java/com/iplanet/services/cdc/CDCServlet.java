@@ -108,7 +108,7 @@ import org.forgerock.openam.utils.StringUtils;
  * <li> if request contains SSO related cookie
  *      <ul>
  *      <li>Retrieve the cookie related to SSO namely
- *          <code>iPlanetDirectoryPro</code> from request.</li>
+ *          <code>vitalAccessToken</code> from request.</li>
  *      <li> Create Liberty <code>AuthnResponse</code> with the SSO cookie as
  *           the Name Identifier.</li>
  *      <li>Send the Response as Form POST to the original request

@@ -673,14 +673,14 @@ am_web_do_cookies_reset(am_status_t (*setFunc)(const char *, void **),
 
 
 /*
- * This function sets the iPlanetDirectoryPro cookie for each domain
+ * This function sets the vitalAccessToken cookie for each domain
  * configured in the com.sun.am.policy.agents.cookieDomainList property.
  * It builds the set-cookie header for each domain specified in the
  * property, and calls the callback function 'setFunc' in the first
  * argument to actually set the cookie.
  * This function is called by am_web_check_cookie_in_query() and
  * am_web_check_cookie_in_post() which are called in CDSSO mode
- * to set the iPlanetDirectoryPro cookie in the cdsso response.
+ * to set the vitalAccessToken cookie in the cdsso response.
  */
 AM_WEB_EXPORT am_status_t
 am_web_do_cookie_domain_set(am_status_t (*setFunc)(const char *, void **),

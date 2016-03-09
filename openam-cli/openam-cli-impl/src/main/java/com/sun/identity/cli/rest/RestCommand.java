@@ -50,7 +50,7 @@ public class RestCommand {
      */
     public String sendRestCommand(SSOTokenID ssoTokenID, URL url, String requestMethod, Map<String, String> headers,
             String data) throws IOException {
-        headers.put(SystemProperties.get(Constants.AM_COOKIE_NAME, "iPlanetDirectoryPro"), ssoTokenID.toString());
+        headers.put(SystemProperties.get(Constants.AM_COOKIE_NAME, "vitalAccessToken"), ssoTokenID.toString());
         return sendRestCommand(url, requestMethod, headers, data);
     }
 

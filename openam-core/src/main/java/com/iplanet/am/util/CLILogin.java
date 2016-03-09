@@ -197,7 +197,7 @@ public class CLILogin {
     private static String getCookie(URL url) throws IOException {
         HttpURLConnection connection = HttpURLConnectionManager.getConnection(url);
 
-        // Get the iPlanetDirectoryPro cookie from the header, strip off
+        // Get the vitalAccessToken cookie from the header, strip off
         // the cookie name, domain, and path to get the value, it must be
         // included in the next post to the auth server, the cookie anme
         // should be taken from the platform.conf

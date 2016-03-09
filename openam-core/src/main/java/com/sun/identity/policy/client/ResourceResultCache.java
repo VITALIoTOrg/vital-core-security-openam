@@ -1756,7 +1756,7 @@ class ResourceResultCache implements SSOTokenListener {
             cookieValue = URLEncoder.encode(cookieValue, "UTF-8");
         }
         String cookieName = SystemProperties.get(Constants.AM_COOKIE_NAME,
-            "iPlanetDirectoryPro");
+            "vitalAccessToken");
         conn.setRequestProperty("Cookie", cookieName + "=" + cookieValue);
 
         String userTokenId = userToken.getTokenID().toString();

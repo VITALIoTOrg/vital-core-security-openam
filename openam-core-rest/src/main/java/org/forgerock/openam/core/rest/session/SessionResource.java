@@ -193,7 +193,7 @@ public class SessionResource implements CollectionResourceProvider {
      * @param request {@inheritDoc}
      */
     public Promise<ActionResponse, ResourceException> actionCollection(Context context, ActionRequest request) {
-        final String cookieName = SystemProperties.get(Constants.AM_COOKIE_NAME, "iPlanetDirectoryPro");
+        final String cookieName = SystemProperties.get(Constants.AM_COOKIE_NAME, "vitalAccessToken");
 
         String tokenId = getTokenIdFromUrlParam(request);
 

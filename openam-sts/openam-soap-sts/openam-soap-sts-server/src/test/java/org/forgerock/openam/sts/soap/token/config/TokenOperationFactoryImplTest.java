@@ -134,7 +134,7 @@ public class TokenOperationFactoryImplTest {
         @Provides
         @Named(AMSTSConstants.AM_SESSION_COOKIE_NAME)
         public String getAMSessionCookieName() {
-            return "iPlanetDirectoryPro";
+            return "vitalAccessToken";
         }
 
         @Provides

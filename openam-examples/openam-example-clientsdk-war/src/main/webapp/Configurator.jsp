@@ -109,7 +109,7 @@ java.util.Properties"
                 props.setProperty("ENCODED_APPLICATION_PASSWORD", (String) 
                   AccessController.doPrivileged(new EncodeAction(appPassword)));
                 props.setProperty("APPLICATION_PASSWD", ""); 
-                props.setProperty("AM_COOKIE_NAME", "iPlanetDirectoryPro");
+                props.setProperty("AM_COOKIE_NAME", "vitalAccessToken");
                 props.setProperty("ENCRYPTION_KEY", "");
                 props.setProperty("ENCRYPTION_KEY_LOCAL", "");
                 props.setProperty("SESSION_PROVIDER_CLASS", 

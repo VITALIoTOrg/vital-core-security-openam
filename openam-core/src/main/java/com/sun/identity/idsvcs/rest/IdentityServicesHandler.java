@@ -276,7 +276,7 @@ public class IdentityServicesHandler extends HttpServlet {
             String id = request.getParameter(n);
             if (isBlank(id)) {
                 try {
-                    // Check the cookie value "iPlanetDirectoryPro"
+                    // Check the cookie value "vitalAccessToken"
                     SSOTokenManager mgr = SSOTokenManager.getInstance();
                     SSOToken token = mgr.createSSOToken(
                         (HttpServletRequest) request);

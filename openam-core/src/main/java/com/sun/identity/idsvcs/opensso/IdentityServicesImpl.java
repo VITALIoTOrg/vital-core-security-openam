@@ -780,7 +780,7 @@ public class IdentityServicesImpl implements com.sun.identity.idsvcs.IdentitySer
 
     @Override
     public String getCookieNameForToken() throws GeneralFailure {
-        return SystemProperties.get(Constants.AM_COOKIE_NAME, "iPlanetDirectoryPro");
+        return SystemProperties.get(Constants.AM_COOKIE_NAME, "vitalAccessToken");
     }
 
     @Override

@@ -78,7 +78,7 @@ public class FSLogoutUtil {
      * Destroys the principal's session.
      * In order to destroy the user's session the following things need
      * to be done
-     * 1. Destroy the Federation Session cookie (eg. iPlanetDirectoryPro)
+     * 1. Destroy the Federation Session cookie (eg. vitalAccessToken)
      * 2. Clean the Session manager (FSSessionManager related API call)
      * @param userID the principal whose session needs to be destroyed
      * @param metaAlias the hostedProvider's meta alias.

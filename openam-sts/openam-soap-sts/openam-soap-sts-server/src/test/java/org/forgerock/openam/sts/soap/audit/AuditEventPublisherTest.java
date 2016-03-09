@@ -52,7 +52,7 @@ public class AuditEventPublisherTest {
         auditEventPublisher = new SoapSTSAuditEventPublisher(
                 httpURLConnectionWrapperFactory,
                 "http://openam.example.com:8080/openam/json/audit/access/?_action=create",
-                "iPlanetDirectoryPro",
+                "vitalAccessToken",
                 "protocol=1.0, resource=1.0",
                 soapSTSAccessTokenProvider,
                 mock(Logger.class));
@@ -79,7 +79,7 @@ public class AuditEventPublisherTest {
         assertThat(urlCaptor.getValue()).isEqualTo(new URL("http://openam.example.com:8080/openam/json/audit/access/?_action=create"));
         assertThat(headersCaptor.getValue().get(AMSTSConstants.CONTENT_TYPE)).isEqualTo(AMSTSConstants.APPLICATION_JSON);
         assertThat(headersCaptor.getValue().get(AMSTSConstants.CREST_VERSION_HEADER_KEY)).isEqualTo("protocol=1.0, resource=1.0");
-        assertThat(headersCaptor.getValue().get(AMSTSConstants.COOKIE)).isEqualTo("iPlanetDirectoryPro=ssoTokenId");
+        assertThat(headersCaptor.getValue().get(AMSTSConstants.COOKIE)).isEqualTo("vitalAccessToken=ssoTokenId");
         assertThat(methodCaptor.getValue()).isEqualToIgnoringCase(AMSTSConstants.GET);
         assertThat(payloadCaptor.getValue()).isEqualToIgnoringCase("event-as-json");
         verify(soapSTSAccessTokenProvider, times(1)).invalidateAccessToken("ssoTokenId");

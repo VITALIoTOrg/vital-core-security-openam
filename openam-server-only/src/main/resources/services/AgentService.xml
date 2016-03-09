@@ -613,7 +613,7 @@
                             syntax="string"
                             i18nKey="a400">
                         <DefaultValues>
-                            <Value>iPlanetDirectoryPro</Value>
+                            <Value>vitalAccessToken</Value>
                         </DefaultValues>
                     </AttributeSchema>
                     <AttributeSchema
@@ -2878,7 +2878,7 @@
                             syntax="string"
                             i18nKey="a216">
                         <DefaultValues>
-                            <Value>iPlanetDirectoryPro</Value>
+                            <Value>vitalAccessToken</Value>
                         </DefaultValues>
                     </AttributeSchema>
                     <AttributeSchema

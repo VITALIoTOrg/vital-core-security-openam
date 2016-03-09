@@ -137,7 +137,7 @@ org.owasp.esapi.ESAPI"
                   AccessController.doPrivileged(new EncodeAction(appPassword)));
                 // set empty application password
                 props.setProperty("APPLICATION_PASSWD", ""); 
-                props.setProperty("AM_COOKIE_NAME", "iPlanetDirectoryPro");
+                props.setProperty("AM_COOKIE_NAME", "vitalAccessToken");
                 props.setProperty("ENCRYPTION_KEY", encPwd);
                 props.setProperty("ENCRYPTION_KEY_LOCAL", "");
                 props.setProperty("SESSION_PROVIDER_CLASS", 
