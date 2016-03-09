@@ -4149,34 +4149,6 @@
                             <Value></Value>
                         </AttributeValuePair>
                     </SubConfiguration>
-                    <SubConfiguration name="administrators"
-                        id="group">
-                       <AttributeValuePair>
-                            <Attribute name="dn" />
-                            <Value>@GROUP_NAMING_ATTR@=administrators,ou=group,</Value>
-                        </AttributeValuePair>
-                    </SubConfiguration>
-                    <SubConfiguration name="developers"
-                        id="group">
-                       <AttributeValuePair>
-                            <Attribute name="dn" />
-                            <Value>@GROUP_NAMING_ATTR@=developers,ou=group,</Value>
-                        </AttributeValuePair>
-                    </SubConfiguration>
-                    <SubConfiguration name="base"
-                        id="group">
-                       <AttributeValuePair>
-                            <Attribute name="dn" />
-                            <Value>@GROUP_NAMING_ATTR@=base,ou=group,</Value>
-                        </AttributeValuePair>
-                    </SubConfiguration>
-                    <SubConfiguration name="internal"
-                        id="group">
-                       <AttributeValuePair>
-                            <Attribute name="dn" />
-                            <Value>@GROUP_NAMING_ATTR@=internal,ou=group,</Value>
-                        </AttributeValuePair>
-                    </SubConfiguration>
                     <SubConfiguration name="amService-URLAccessAgent"
                         id="user">
                         <AttributeValuePair>
