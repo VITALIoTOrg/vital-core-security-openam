@@ -550,6 +550,41 @@
                             <Value>1422892465848</Value>
                         </AttributeValuePair>
                     </SubConfiguration>
+                    <SubConfiguration name="fine-grained-resources" id="resourceType">
+                        <AttributeValuePair>
+                            <Attribute name="name" />
+                            <Value>Field-Value</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="description" />
+                            <Value>The resource type for fine-grained access control</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="patterns" />
+                            <Value>*</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="actions" />
+                            <Value>RETRIEVE=true</Value>
+                            <Value>STORE=true</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="createdBy" />
+                            <Value>id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="creationDate" />
+                            <Value>1422892465848</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="lastModifiedBy" />
+                            <Value>id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="lastModifiedDate" />
+                            <Value>1422892465848</Value>
+                        </AttributeValuePair>
+                    </SubConfiguration>
                     <SubConfiguration name="20a13582-1f32-4f83-905f-f71ff4e2e00d" id="resourceType">
                         <AttributeValuePair>
                             <Attribute name="name" />
@@ -657,6 +692,10 @@
                         <AttributeValuePair>
                             <Attribute name="applicationType" />
                             <Value>FineGrainedAccess</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="resourceTypeUuids"/>
+                            <Value>fine-grained-resources</Value>
                         </AttributeValuePair>
                         <AttributeValuePair>
                             <Attribute name="subjects" />
