@@ -41,7 +41,7 @@
 
     <!-- Build -->
     <build>
-        <finalName>OpenAM-${project.version}</finalName>
+        <finalName>vital-openam</finalName>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.cargo</groupId>
