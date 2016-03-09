@@ -644,6 +644,56 @@
                            <Value>DenyOverride</Value>
                         </AttributeValuePair>
                     </SubConfiguration>
+                    <SubConfiguration name="Data access control"
+                        id="application">
+                        <AttributeValuePair>
+                            <Attribute name="displayName" />
+                            <Value>Access control Policy Set</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="description" />
+                            <Value>Policy set for fine-grained data access control</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="applicationType" />
+                            <Value>FineGrainedAccess</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="subjects" />
+                            <Value>AND</Value>
+                            <Value>OR</Value>
+                            <Value>NOT</Value>
+                            <Value>AuthenticatedUsers</Value>
+                            <Value>Identity</Value>
+                            <Value>JwtClaim</Value>
+                            <Value>NONE</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="conditions" />
+                            <Value>AND</Value>
+                            <Value>OR</Value>
+                            <Value>NOT</Value>
+                            <Value>AMIdentityMembership</Value>
+                            <Value>AuthLevel</Value>
+                            <Value>LEAuthLevel</Value>
+                            <Value>AuthScheme</Value>
+                            <Value>AuthenticateToRealm</Value>
+                            <Value>AuthenticateToService</Value>
+                            <Value>IPv4</Value>
+                            <Value>IPv6</Value>
+                            <Value>LDAPFilter</Value>
+                            <Value>OAuth2Scope</Value>
+                            <Value>ResourceEnvIP</Value>
+                            <Value>Session</Value>
+                            <Value>SessionProperty</Value>
+                            <Value>SimpleTime</Value>
+                            <Value>Script</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="entitlementCombiner" />
+                           <Value>DenyOverride</Value>
+                        </AttributeValuePair>
+                    </SubConfiguration>
                     <SubConfiguration name="sunAMDelegationService"
                         id="application">
                         <AttributeValuePair>
