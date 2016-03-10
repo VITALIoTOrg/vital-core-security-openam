@@ -136,6 +136,20 @@
                         <AttributeSchema name="roles" i18nKey="roles" />
                     </SubSchema>
                 </SubSchema>
+                <SubSchema name="groups" i18nKey="groups">
+                    <SubSchema name="group" inheritance="multiple"
+                        i18nKey="group">
+                        <AttributeSchema name="dn"
+                            type="single"
+                            isSearchable="yes"
+                            i18nKey="dn" />
+                        <AttributeSchema name="cn"
+                            type="single"
+                            isSearchable="yes"
+                            i18nKey="cn" />
+                        <AttributeSchema name="uniqueMember" i18nKey="uniqueMember" />
+                    </SubSchema>
+                </SubSchema>
             </Global>
             <Organization>
                 <AttributeSchema name="sunIdRepoAttributeCombiner"
@@ -4018,6 +4032,52 @@
                         </AttributeValuePair>
                 </SubConfiguration>
                 <SubConfiguration name="realm" id="SupportedIdentities" >
+                </SubConfiguiration>
+                <SubConfiguration name="groups" id="groups">
+                    <SubConfiguration name="administrators"
+                        id="group">
+                       <AttributeValuePair>
+                            <Attribute name="dn" />
+                            <Value>@GROUP_NAMING_ATTR@=administrators,ou=group,</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="cn" />
+                            <Value>administrators</Value>
+                        </AttributeValuePair>
+                    </SubConfiguration>
+                    <SubConfiguration name="developers"
+                        id="group">
+                       <AttributeValuePair>
+                            <Attribute name="dn" />
+                            <Value>@GROUP_NAMING_ATTR@=developers,ou=group,</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="cn" />
+                            <Value>developers</Value>
+                        </AttributeValuePair>
+                    </SubConfiguration>
+                    <SubConfiguration name="base"
+                        id="group">
+                       <AttributeValuePair>
+                            <Attribute name="dn" />
+                            <Value>@GROUP_NAMING_ATTR@=base,ou=group,</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="cn" />
+                            <Value>base</Value>
+                        </AttributeValuePair>
+                    </SubConfiguration>
+                    <SubConfiguration name="internal"
+                        id="group">
+                       <AttributeValuePair>
+                            <Attribute name="dn" />
+                            <Value>@GROUP_NAMING_ATTR@=internal,ou=group,</Value>
+                        </AttributeValuePair>
+                        <AttributeValuePair>
+                            <Attribute name="cn" />
+                            <Value>internal</Value>
+                        </AttributeValuePair>
+                    </SubConfiguration>
                 </SubConfiguration>
                 <SubConfiguration name="users" id="users">
                     <SubConfiguration name="amAdmin"
@@ -4147,34 +4207,6 @@
                         <AttributeValuePair>
                             <Attribute name="telephoneNumber" />
                             <Value></Value>
-                        </AttributeValuePair>
-                    </SubConfiguration>
-                    <SubConfiguration name="administrators"
-                        id="group">
-                       <AttributeValuePair>
-                            <Attribute name="dn" />
-                            <Value>@GROUP_NAMING_ATTR@=administrators,ou=group,</Value>
-                        </AttributeValuePair>
-                    </SubConfiguration>
-                    <SubConfiguration name="developers"
-                        id="group">
-                       <AttributeValuePair>
-                            <Attribute name="dn" />
-                            <Value>@GROUP_NAMING_ATTR@=developers,ou=group,</Value>
-                        </AttributeValuePair>
-                    </SubConfiguration>
-                    <SubConfiguration name="base"
-                        id="group">
-                       <AttributeValuePair>
-                            <Attribute name="dn" />
-                            <Value>@GROUP_NAMING_ATTR@=base,ou=group,</Value>
-                        </AttributeValuePair>
-                    </SubConfiguration>
-                    <SubConfiguration name="internal"
-                        id="group">
-                       <AttributeValuePair>
-                            <Attribute name="dn" />
-                            <Value>@GROUP_NAMING_ATTR@=internal,ou=group,</Value>
                         </AttributeValuePair>
                     </SubConfiguration>
                     <SubConfiguration name="amService-URLAccessAgent"
