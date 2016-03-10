@@ -4032,10 +4032,9 @@
                         </AttributeValuePair>
                 </SubConfiguration>
                 <SubConfiguration name="realm" id="SupportedIdentities" >
-                </SubConfiguiration>
+                </SubConfiguration>
                 <SubConfiguration name="groups" id="groups">
-                    <SubConfiguration name="administrators"
-                        id="group">
+                    <SubConfiguration name="administrators" id="group">
                        <AttributeValuePair>
                             <Attribute name="dn" />
                             <Value>@GROUP_NAMING_ATTR@=administrators,ou=group,</Value>
@@ -4045,8 +4044,7 @@
                             <Value>administrators</Value>
                         </AttributeValuePair>
                     </SubConfiguration>
-                    <SubConfiguration name="developers"
-                        id="group">
+                    <SubConfiguration name="developers" id="group">
                        <AttributeValuePair>
                             <Attribute name="dn" />
                             <Value>@GROUP_NAMING_ATTR@=developers,ou=group,</Value>
@@ -4056,8 +4054,7 @@
                             <Value>developers</Value>
                         </AttributeValuePair>
                     </SubConfiguration>
-                    <SubConfiguration name="base"
-                        id="group">
+                    <SubConfiguration name="base" id="group">
                        <AttributeValuePair>
                             <Attribute name="dn" />
                             <Value>@GROUP_NAMING_ATTR@=base,ou=group,</Value>
@@ -4067,8 +4064,7 @@
                             <Value>base</Value>
                         </AttributeValuePair>
                     </SubConfiguration>
-                    <SubConfiguration name="internal"
-                        id="group">
+                    <SubConfiguration name="internal" id="group">
                        <AttributeValuePair>
                             <Attribute name="dn" />
                             <Value>@GROUP_NAMING_ATTR@=internal,ou=group,</Value>
