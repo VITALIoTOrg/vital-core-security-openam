@@ -846,16 +846,17 @@ public class DataStore {
         final long start = DB_MONITOR_PRIVILEGE.start();
 
         final SSOToken token = AccessController.doPrivileged(AdminTokenAction.getInstance());
-        final Privilege privilege;
-
+       // final Privilege privilege; fix Bug8531
+ 	Privilege privilege = null;
         try {
             final Iterator i = SMSEntry.search(token, privilegeDN, NO_FILTER, NO_LIMIT, NO_LIMIT,
                     NOT_SORTED, NOT_SORTED, NO_EXCLUSIONS);
-            if (i.hasNext()) {
+            // if (i.hasNext()) {
+ 		while (i.hasNext()) {
                 SMSDataEntry e = (SMSDataEntry) i.next();
                 privilege = Privilege.getInstance(new JSONObject(e.getAttributeValue(SERIALIZABLE_INDEX_KEY)));
-            } else {
-                privilege = null;
+           // } else {
+             //   privilege = null;
             }
         } catch (SMSException e) {
             Object[] arg = {privilegeDN};
